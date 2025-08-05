@@ -1,0 +1,22 @@
+{
+  "name": "resumecraft-ai",
+  "version": "1.0.0",
+  "description": "Crafting Your Future, One Resume at a Time",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build:static && npm run build:functions",
+    "build:static": "echo 'Building static assets...'",
+    "build:functions": "echo 'Building functions...'",
+    "deploy": "wrangler publish"
+  },
+  "dependencies": {
+    "@cloudflare/workers-types": "^3.0.0",
+    "some-ai-library": "^1.0.0" // Replace with actual AI library used
+  },
+  "devDependencies": {
+    "typescript": "^4.0.0",
+    "wrangler": "^3.0.0"
+  },
+  "author": "Your Name",
+  "license": "MIT"
+}

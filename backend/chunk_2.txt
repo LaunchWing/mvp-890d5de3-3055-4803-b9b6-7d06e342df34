@@ -1,0 +1,19 @@
+export async function onRequest(context) {
+  const { request } = context;
+
+  if (request.method === 'POST') {
+    // Create a new subscription
+    const body = await request.json();
+    const subscription = await createSubscription(body);
+    return new Response(JSON.stringify({ success: true, subscription }), {
+      headers: { 'Content-Type': 'application/json' },
+    });
+  } else {
+    return new Response('Method Not Allowed', { status: 405 });
+  }
+}
+
+async function createSubscription(data) {
+  // Placeholder function for creating a subscription
+  return { userId: data.userId, plan: data.plan, status: 'active' };
+}

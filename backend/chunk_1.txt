@@ -1,0 +1,32 @@
+export async function onRequest(context) {
+  const { request, env } = context;
+  const url = new URL(request.url);
+
+  if (request.method === 'GET') {
+    // Fetch user profile
+    const userId = url.searchParams.get('userId');
+    const userProfile = await getUserProfile(env, userId);
+    return new Response(JSON.stringify({ success: true, profile: userProfile }), {
+      headers: { 'Content-Type': 'application/json' },
+    });
+  } else if (request.method === 'POST') {
+    // Update user profile
+    const body = await request.json();
+    const updatedProfile = await updateUserProfile(env, body);
+    return new Response(JSON.stringify({ success: true, profile: updatedProfile }), {
+      headers: { 'Content-Type': 'application/json' },
+    });
+  } else {
+    return new Response('Method Not Allowed', { status: 405 });
+  }
+}
+
+async function getUserProfile(env, userId) {
+  // Placeholder function for fetching user profile
+  return { userId, name: 'John Doe', email: 'john.doe@example.com' };
+}
+
+async function updateUserProfile(env, data) {
+  // Placeholder function for updating user profile
+  return data;
+}

@@ -1,0 +1,22 @@
+name = "resumecraft-ai"
+type = "javascript" # or "typescript" if you're using TypeScript
+
+account_id = "your-cloudflare-account-id"
+workers_dev = true
+compatibility_date = "2023-10-01"
+
+[site]
+bucket = "./public" # The directory where your static files are located
+entry-point = "functions" # The directory where your functions are located
+
+[build]
+command = "npm run build" # Command to build your project
+cwd = "." # Current working directory
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
+
+[env.production]
+route = "resumecraftai.com/*" # Your custom domain

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResumeCraft AI</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <header class="bg-[#2E4057] p-4 flex items-center justify-between">
+        <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-eeM7RLe3Wv2HZ7Toub47POas/user-rnGwZEmjnwoUoF8lEvadvt0O/img-1Jir657QDIMqrF4QE6o0sLZ0.png?st=2025-08-05T14%3A34%3A56Z&se=2025-08-05T16%3A34%3A56Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=cc612491-d948-4d2e-9821-2683df3719f5&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-08-05T14%3A55%3A18Z&ske=2025-08-06T14%3A55%3A18Z&sks=b&skv=2024-08-04&sig=qzbndheNsnP4qXD6ijVrvltkghNM1WMV8zzauT3%2B0nY%3D" alt="ResumeCraft AI Logo" class="h-12">
+        <h1 class="text-white text-2xl font-bold">ResumeCraft AI</h1>
+    </header>
+    <main class="container mx-auto mt-8 p-4">
+        <h2 class="text-3xl font-bold text-center mb-4">Crafting Your Future, One Resume at a Time</h2>
+        <div id="app" class="bg-white p-6 rounded-lg shadow-lg">
+            <p class="text-lg">Hi! I'm your AI cofounder. Let's build something together.</p>
+            <p class="text-lg mt-4">To start, tell me about the startup idea you're exploring — even if it's rough.</p>
+            <textarea id="userInput" class="w-full mt-4 p-2 border rounded" placeholder="Enter your idea here..."></textarea>
+            <button id="submitBtn" class="mt-4 bg-[#F4A261] text-white py-2 px-4 rounded hover:bg-[#E76F51]">Submit</button>
+            <div id="response" class="mt-4"></div>
+        </div>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+/resumecraft-ai
+  /public
+    index.html
+    styles.css
+    script.js
+  /functions
+    index.js
+  package.json
+  wrangler.toml
